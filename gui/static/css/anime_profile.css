@@ -1,0 +1,78 @@
+.anime-card {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(145deg, rgb(83, 92, 145), rgb(146, 144, 195));
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin: 30px 30px 30px 40px; /* aligned left */
+    max-width: 900px;
+    gap: 20px;
+    align-items: flex-start;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background: linear-gradient(135deg, rgb(7, 15, 43), rgb(27, 26, 85));
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+}
+.anime-card img {
+    width: 200px;
+    border-radius: 12px;
+    border: 3px solid rgb(30, 40, 0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.anime-details {
+    display: flex;
+    flex-direction: column;
+    color: #ffffffbd;
+    font-family: 'Poppins', sans-serif;
+    max-width: 650px;
+}
+
+.anime-details h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: rgb(30, 40, 0);
+    margin-bottom: 15px;
+}
+
+.anime-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.anime-details p strong {
+     color: rgb(30, 40, 0);
+}
+
+.anime-details .score {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffd700; /* keep star rating yellow */
+    margin-top: 10px;
+}
+.anime-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 40px;
+}
+
+.radar-chart {
+    max-width: 400px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+}

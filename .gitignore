@@ -1,0 +1,12 @@
+# Ignore large files
+data/reviews.csv
+
+# Ignore Jupyter notebooks
+*.ipynb
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore system files
+.DS_Store
+Thumbs.db

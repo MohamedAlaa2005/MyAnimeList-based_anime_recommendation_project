@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <div class="background"></div>
+        <header>
+            <div class="logo">
+        <svg width="63.28437499999999" height="63.28437499999999" viewBox="0 0 223.4375 223.4375" class="looka-1j8o68f">
+            <defs id="SvgjsDefs1013"></defs>
+            <g id="SvgjsG1014" featurekey="rootContainer" transform="matrix(4.46875,0,0,4.46875,0,0)" fill="#ffffff">
+                <path xmlns="http://www.w3.org/2000/svg" d="M50 13.36V50H0V0h36.28L50 13.36z"></path>
+            </g>
+            <g id="SvgjsG1015" featurekey="symbolFeature-0" transform="matrix(0.6122386540577416,0,0,0.6122386540577416,81.38806729711291,39.38776134594226)" fill="#9896f1">
+                <g xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50,1c0,20.219-32.667,42.937-32.667,65.333c0,11.038,5.474,20.797,13.855,26.711c0-20.22,32.667-42.937,32.667-65.333 C63.855,16.672,58.381,6.914,50,1z"></path>
+                    <path d="M74.927,38.552c-4.613,20.542-32.005,41.154-32.005,59.669C45.201,98.727,47.568,99,50,99 c18.041,0,32.667-14.625,32.667-32.667C82.667,58.777,79.602,48.761,74.927,38.552z"></path>
+                </g>
+            </g>
+            <g id="SvgjsG1016" featurekey="nameFeature-0" transform="matrix(1.8438616150009013,0,0,1.8438616150009013,57.57473238776436,100.01254508736967)" fill="#9896f1">
+                <path d="M25.64 31.880000000000003 l0 4.68 c0 0.44 -0.36 0.76 -0.8 0.76 l-1.08 0 l1.68 6.68 l0.04 0.2 l0 0.08 c0 0.48 -0.32 0.84 -0.76 0.84 l-4.84 0 c-0.32 0 -0.6 -0.24 -0.72 -0.56 l-0.04 -0.12 l-1.76 -7.12 l-6.84 0 l-1.76 7.16 s-0.04 0.04 -0.04 0.08 c-0.08 0.32 -0.4 0.56 -0.72 0.56 l-4.84 0 c-0.4 0 -0.76 -0.36 -0.76 -0.84 l0 -0.16 c0.04 0 0.04 -0.04 0.04 -0.08 l8.12 -32.44 l0.04 -0.24 c0.12 -0.28 0.4 -0.48 0.72 -0.48 l5.24 0 c0.32 0 0.6 0.2 0.72 0.48 l0.04 0.2 l4.88 19.56 l2.64 0 c0.44 0 0.8 0.32 0.8 0.76 z M12.08 31.119999999999997 l3.72 0 l-1.84 -7.4 z M55.274 43.92 l0.04 0.08 c0.08 0.12 0.08 0.24 0.08 0.36 c0 0.48 -0.32 0.84 -0.76 0.84 l-5.36 0 c-0.28 0 -0.52 -0.16 -0.64 -0.36 l-0.08 -0.12 l-6.84 -12.08 l-0.84 -1.52 l-3 0 l0 13.28 c0 0.44 -0.36 0.8 -0.76 0.8 l-4.68 0 c-0.44 0 -0.8 -0.36 -0.8 -0.8 l0 -19.52 l5.72 0 l-5.32 -9.36 l0 -0.04 l-0.4 -0.72 l0 -3.16 c0 -0.4 0.36 -0.76 0.8 -0.76 l11.68 0 c3.64 0 6.8 1 9.04 2.92 c2.2 1.84 3.48 4.48 3.48 7.24 c0 4.2 -3 8.48 -8.8 9.76 l0.2 0.36 l0.88 1.52 z M43.674 23.4 l0.84 1.48 c0.4 0 0.8 -0.04 1.16 -0.08 c3.24 -0.44 4.68 -2.2 4.68 -3.8 c0 -1.88 -1.92 -3.92 -6.24 -3.92 l-4 0 z"></path>
+            </g>
+        </svg>
+    </div>
+    <div class="link-list">
+    <ul>
+      <li><a href="/recommend">Contect&nbsp;Base</a></li>
+      <li><a href="/collaborative_filtering">Collaborative&nbsp;Filtering</a></li>
+      <li><a href="/hybrid">Hybrid</a></li>
+    </ul>
+    </div>
+      </header>
+  <h1>Contect Base</h1>
+    <ul id="anime-list"></ul>
+   <div class="loader-container">
+    <h1 class="loading-title">Generating Your Anime Recommendations</h1>
+    <div class="fancy-loader"></div>
+    <p class="loading-msg">Please wait a moment<span class="dots"></span></p>
+</div>
+
+    
+    <script src="../static/js/anime_profile.js"></script>
+</body>
+</html>
+<!-- <div id="main">
+    <h1>Contect Base</h1>
+    <ul>
+      {% for anime in animes %}
+      <li>
+        <a href="/anime_profile?title={{ anime.title | urlencode }}"  onclick="window.location.href='/send-title?title={{ anime.title | urlencode }}'" class="a">
+        <div>
+          <img src="{{ anime.img_url }}" alt="Image not found" width="150"/>
+          <p><strong>{{ anime.title }}</strong> ({{ anime.anime_year|default('N/A') }})</p>
+          <p>⭐ {{ anime.score if anime.score else "N/A" }}</p>
+        </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div> -->
