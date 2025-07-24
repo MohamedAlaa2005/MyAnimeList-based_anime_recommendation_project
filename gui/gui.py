@@ -59,7 +59,7 @@ def anime_profile():
         return render_template('anime_profile.html'
                            ,title=row.iloc[0][1],Synopsis=row.iloc[0][2],Genre=row.iloc[0][3],
                            Aired=row.iloc[0][4],Episodes=row.iloc[0][5],Popularity=row.iloc[0][7]
-                           ,Ranked=row.iloc[0][8],score=row.iloc[0][9],src=row.iloc[0][10])
+                           ,Ranked=np.int64(row.iloc[0][8]),score=row.iloc[0][9],src=row.iloc[0][10])
     scores = anime_avg.loc[anime_name].tolist()
     labels = [label.replace("_score", "") for label in score_labels]
     scores += scores[:1]
